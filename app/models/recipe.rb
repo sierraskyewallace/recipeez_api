@@ -1,6 +1,6 @@
 class Recipe < ApplicationRecord
-    belongs_to :recipe_category
+    belongs_to :category
 
     validates :name, presence: true
-    validates :recipe_category_id  , presence: true
+    validates :category_id, presence: true
 end
