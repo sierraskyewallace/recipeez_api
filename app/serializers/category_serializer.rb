@@ -1,4 +1,4 @@
-class CategorySerializer
+class CategorySerializer 
   include FastJsonapi::ObjectSerializer
-  attributes :name, :description
+  attributes :id, :name, :description
 end
