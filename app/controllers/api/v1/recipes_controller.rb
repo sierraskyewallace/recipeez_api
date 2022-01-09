@@ -22,7 +22,7 @@ class Api::V1::RecipesController < ApplicationController
             render json: {error: 'Error creating recipe'}
             end
         end
-end
+
 
 
     def update

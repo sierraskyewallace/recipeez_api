@@ -22,12 +22,6 @@ class Api::V1::CategoriesController < ApplicationController
             render json: {error: 'Error creating category'}
             end
         end
-
-    def update
-        category = Category.find(params[:id])
-        category.update(category_params)
-        render json: CategorySerializer.new(category)
-    end
     
     def destroy
         category = Category.find(params[:id])
