@@ -2,12 +2,12 @@ class Api::V1::CategoriesController < ApplicationController
 
     def index
         categories = Category.all
-        render json: CategorySerializer.new(categories)
+        render json: @categories
     end
 
     def show
         category = Category.find(params[:id])
-        render json: CategorySerializer.new(category)
+        render json: @categories
     end
 
     def new
@@ -17,7 +17,7 @@ class Api::V1::CategoriesController < ApplicationController
     def create
         category = Category.create(category_params)
             if category.save!
-            render json: CategorySerializer.new(category)
+            render json: @categories
             else
             render json: {error: 'Error creating category'}
             end
@@ -26,7 +26,7 @@ class Api::V1::CategoriesController < ApplicationController
     def destroy
         category = Category.find(params[:id])
         category.destroy
-        render json: CategorySerializer.new(category)
+        render json: @categories
     end
 
     private
