@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_01_14_212945) do
     t.string "name"
     t.string "description"
     t.string "image_url"
-    t.integer "tag_ids"
+    t.integer "tag_id"
     t.string "instructions"
     t.string "ingredients"
     t.datetime "created_at", precision: 6, null: false
