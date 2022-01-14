@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-    has_many :tags
+    has_one :tag
 
 
 end
