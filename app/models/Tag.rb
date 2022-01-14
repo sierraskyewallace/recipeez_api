@@ -1,4 +1,5 @@
 class Tag < ActiveRecord::Base
-    belongs_to :recipe, optional: true
-    validates :name, presence: true
-  end
+  has_many :recipe_tags
+  has_many :recipes, through: :recipe_tags
+  
+end

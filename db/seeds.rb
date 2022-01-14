@@ -7,21 +7,18 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-Tag1 = Tag.create(name: "Vegan")
-Tag2 = Tag.create(name: "Vegetarian")
-Tag3 = Tag.create(name: "Gluten-free")
-Tag4 = Tag.create(name: "Dairy-free")
-Tag5 = Tag.create(name: "Keto")
-Tag6 = Tag.create(name: "Paleo")
-Tag7 = Tag.create(name: "Fat-Free")
-Tag8 = Tag.create(name: "Sugar-Free")
-Tag9 = Tag.create(name: "Low-Carb")
-Tag10 = Tag.create(name: "Budget Friendly")
-Tag11 = Tag.create(name: "Easy")
-Tag12 = Tag.create(name: "Quick")
-Tag13 = Tag.create(name: "Healthy")
-Tag14 = Tag.create(name: "Low Calorie")
+# Create a tag
+tag1 = Tag.create(name: "Vegan")
+tag2 = Tag.create(name: "Vegetarian")
+tag3 = Tag.create(name: "Gluten-free")
+tag4 = Tag.create(name: "Dairy-free")
+tag5 = Tag.create(name: "Keto")
+tag6 = Tag.create(name: "Paleo")
+tag7 = Tag.create(name: "Pescatarian")
 
-recipe1 = Recipe.create(name: "Vegan Pizza", description: "A vegan pizza recipe", image_url: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/05/vegan-pizza.jpg?itok=_kWX6Q_l", instructions: "1. Preheat oven to 350 degrees.", ingredients: "1.5 cups (1 1/2 sticks) unsalted butter, at room temperature", tag_id: Tag1.id)
-recipe2 = Recipe.create(name: "Vegetarian Pizza", description: "A vegetarian pizza recipe", image_url: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/05/vegan-pizza.jpg?itok=_kWX6Q_l", instructions: "1. Preheat oven to 350 degrees.", ingredients: "1.5 cups (1 1/2 sticks) unsalted butter, at room temperature", tag_id: Tag2.id)
+# Create a recipe
+recipe1 = Recipe.create(name: "Vegan Pizza", description: "A vegan pizza", image_url: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/05/vegan-pizza.jpg?itok=_kWX6Q_l", instructions: "1. Preheat oven to 400 degrees.",
+ingredients: "1.5 cups (1 1/2 sticks) unsalted butter, at room temperature", tag_ids: [tag1.id])
 
+recipe2 = Recipe.create(name: "Vegetarian Pizza", description: "A vegetarian pizza", image_url: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/05/vegan-pizza.jpg?itok=_kWX6Q_l", instructions: "1. Preheat oven to 400 degrees.",
+ingredients: "1.5 cups (1 1/2 sticks) unsalted butter, at room temperature", tag_ids: [tag2.id, tag3.id])
