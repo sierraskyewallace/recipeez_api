@@ -8,17 +8,8 @@
 
 
 # Create a tag
-tag1 = Tag.create(name: "Vegan")
-tag2 = Tag.create(name: "Vegetarian")
-tag3 = Tag.create(name: "Gluten-free")
-tag4 = Tag.create(name: "Dairy-free")
-tag5 = Tag.create(name: "Keto")
-tag6 = Tag.create(name: "Paleo")
-tag7 = Tag.create(name: "Pescatarian")
-
-# Create a recipe
-recipe1 = Recipe.create(name: "Vegan Pizza", description: "A vegan pizza", image_url: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/05/vegan-pizza.jpg?itok=_kWX6Q_l", instructions: "1. Preheat oven to 400 degrees.",
-ingredients: "1.5 cups (1 1/2 sticks) unsalted butter, at room temperature", tag_ids: [tag1.id])
-
-recipe2 = Recipe.create(name: "Vegetarian Pizza", description: "A vegetarian pizza", image_url: "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/05/vegan-pizza.jpg?itok=_kWX6Q_l", instructions: "1. Preheat oven to 400 degrees.",
-ingredients: "1.5 cups (1 1/2 sticks) unsalted butter, at room temperature", tag_ids: [tag2.id, tag3.id])
+recipe1 = Recipe.create(name: "Pizza", description: "A delicious pizza", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Pizza-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
+recipe2 = Recipe.create(name: "Spaghetti", description: "A delicious spaghetti", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Spaghetti-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
+recipe3 = Recipe.create(name: "Lasagna", description: "A delicious lasagna", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Lasagna-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
+recipe4 = Recipe.create(name: "Ravioli", description: "A delicious ravioli", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Ravioli-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
+recipe5 = Recipe.create(name: "Tiramisu", description: "A delicious tiramisu", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Tiramisu-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
