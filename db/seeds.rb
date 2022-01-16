@@ -7,9 +7,22 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-# Create a tag
-recipe1 = Recipe.create(name: "Pizza", description: "A delicious pizza", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Pizza-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
-recipe2 = Recipe.create(name: "Spaghetti", description: "A delicious spaghetti", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Spaghetti-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
-recipe3 = Recipe.create(name: "Lasagna", description: "A delicious lasagna", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Lasagna-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
-recipe4 = Recipe.create(name: "Ravioli", description: "A delicious ravioli", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Ravioli-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
-recipe5 = Recipe.create(name: "Tiramisu", description: "A delicious tiramisu", image_url: "https://www.tasteofhome.com/wp-content/uploads/2018/01/Tiramisu-Recipe_EXPS_SDON18_55166_C06_23_6b-696x696.jpg", instructions: "Bake it", ingredients: "Cheese, dough, sauce")
+category1 = Category.create(name: "Breakfast")
+category2 = Category.create(name: "Lunch")
+category3 = Category.create(name: "Dinner")
+category4 = Category.create(name: "Dessert")
+category5 = Category.create(name: "Snack")
+category6 = Category.create(name: "Vegan")
+category7 = Category.create(name: "Vegetarian")
+category8 = Category.create(name: "Gluten Free")
+category9 = Category.create(name: "Paleo")
+category10 = Category.create(name: "Keto")
+category11 = Category.create(name: "Pescatarian")
+category12 = Category.create(name: "Dairy-Free")
+
+recipe1 = Recipe.create(name: "Breakfast Burrito", description: "A delicious burrito with eggs, cheese, and salsa", image_url: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", instructions: "1. Cook the eggs in a small pot.", ingredients: "1.5 cups of eggs
+2.5 cups of cheese", category_id: category1.id)
+
+recipe2 = Recipe.create(name: "Vegan Burrito", description: "A delicious burrito with eggs, cheese, and salsa", image_url: "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", instructions: "1. Cook the eggs in a small pot.", ingredients: "1.5 cups of eggs
+2.5 cups of cheese", category_id: category6.id)
+

@@ -6,6 +6,7 @@ class CreateRecipes < ActiveRecord::Migration[7.0]
       t.string :image_url
       t.string :instructions
       t.string :ingredients
+      t.integer :category_id
       t.timestamps
     end
   end
