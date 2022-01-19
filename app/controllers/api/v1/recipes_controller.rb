@@ -1,8 +1,9 @@
 class Api::V1::RecipesController < ApplicationController
 
-    before_action :set_category
+    before_action :set_category, except: [:destroy]
 
     def index 
+        
         @recipes = Recipe.all
         render json: @recipes
     end
@@ -26,15 +27,16 @@ class Api::V1::RecipesController < ApplicationController
 
 
     def update
-        #@recipe = Recipe.find(params[:id])
+        @recipe = Recipe.find(params[:id])
         @recipe.update(recipe_params)
         render json: @recipe
     end
 
     def destroy
-        @recipe = Recipe.find(params[:id])
+        @category = Category.find(params[:id])
+        @recipe = Recipe.find_by(params[:id])
         @recipe.destroy
-        render json: {message: 'Recipe deleted'}
+        render json: @category
     end
 
     private
